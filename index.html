@@ -24,7 +24,7 @@
         letter-spacing: 0px;
         line-height: 50px;
         }
-      hr {margin-bottom:50px;}
+      hr {margin-bottom:10px;}
       .top3 {font-weight:bold; color:#c00;}
       .quiet { color:#999; }
     </style>
@@ -76,8 +76,8 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>History of On Base Percentage since 1960</h1>
-        <p>Discripton goes here</p>
-        <p>A project for <a href="http://baseballhackday.com/">2013 Baseball Hack Day</a> on Saturday, March 30, 2013 at thoughtbot by Daigo Fujiwara. Data is from <a href="http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Team+hitting&game_type='R'&season=2012&season_type=ANY&league_code='MLB'&sectionType=st&statType=hitting&page=1&ts=1364672675033&playerType=QUALIFIER&sportCode='mlb'&split=&team_id=&active_sw=&position=&page_type=SortablePlayer&sortOrder='desc'&sortColumn=obp&results=&perPage=50&timeframe=&last_x_days=&extended=0">MLB.com</a>.</p>
+        <p>This is visualization of a historical view of baseball teams' On Base Percentage since 1960. The motivation is to determine if there are particular trends over time.</p>
+        <p>A project for <a href="http://baseballhackday.com/">2013 Baseball Hack Day</a> on Saturday, March 30, 2013 at thoughtbot by Daigo Fujiwara and Diane Williams. Data is from <a href="http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Team+hitting&game_type='R'&season=2012&season_type=ANY&league_code='MLB'&sectionType=st&statType=hitting&page=1&ts=1364672675033&playerType=QUALIFIER&sportCode='mlb'&split=&team_id=&active_sw=&position=&page_type=SortablePlayer&sortOrder='desc'&sortColumn=obp&results=&perPage=50&timeframe=&last_x_days=&extended=0">MLB.com</a>.</p>
       
       </div>
 
@@ -131,10 +131,11 @@ $(function () {
         chart = new Highcharts.Chart({
             chart: {
                 renderTo: 'container',
-                type: 'spline'
+                type: 'spline',
+                zoomType: 'x',
             },
             title: {
-                text: 'On Base Percentage'
+                text: ''
             },
             subtitle: {
                 text: ''
@@ -143,11 +144,19 @@ $(function () {
                 enabled: false
             },
             colors: [
-                '#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888'
+                '#999999', '#cfcfcf', '#d7d7d7', '#DD1E2F', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#ababab', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#274257', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888'
             ],
             xAxis: {
                 categories: ["'60", "'61", "'62", "'63", "'64", "'65", "'66", "'67", "'68", "'69", "'70", "'71", "'72", "'73", "'74", "'75", "'76", "'77", "'78", "'79", "'80", "'81", "'82", "'83", "'84", "'85", "'86", "'87", "'88", "'89", "'90", "'91", "'92", "'93", "'94", "'95", "'96", "'97", "'98", "'99", "'00", "'01", "'02", "'03", "'04", "'05", "'06", "'07", "'08", "'09", "'10", "'11", "'12"]
             },
+            legend: {
+                title: {
+                    text: 'Click to hide'
+                },
+               
+                verticalAlign: 'top'
+            },
+
             yAxis: {
                 title: {
                     text: 'On Base Percentage'
@@ -177,7 +186,10 @@ $(function () {
                     }
                 }
             },
-            series: obpdata
+            series: obpdata,
+            exporting: {
+                enabled: false
+            }
         });
     });
     
