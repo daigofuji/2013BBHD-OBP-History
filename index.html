@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>History of On Base Percentage since 1960: 2013 Boston Baseball Hack Day submission by Daigo Fujiwara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A project for 2013 Baseball Hack Day on Saturday, March 30, 2013 at thoughtbot by Daigo Fujiwara. Data taken from MLB.com.">
+    <meta name="author" content="Daigo Fujiwara">
+
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        font-family: 'Open Sans', sans-serif;
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .hero-unit {font-size:16px;
+        line-height: 24px; padding: 25px 40px; 
+        text-shadow: 0px 1px 1px #fff;}
+      .hero-unit h1 {margin-bottom:25px;
+        font-size: 50px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        }
+      hr {margin-bottom:50px;}
+      .top3 {font-weight:bold; color:#c00;}
+      .quiet { color:#999; }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- facebook mumbo jumbo
+      if changed http://developers.facebook.com/tools/debug
+      ============================== -->
+
+      <meta property="og:image" content="http://daigofujiwara.com/nfl/assets/img/thumb.png"/>
+      <meta property="og:title" content="History of On Base Percentage since 1960: 2013 Boston Baseball Hack Day submission by Daigo Fujiwara"/>
+      <meta property="og:url" content="http://daigofujiwara.com/bbhd2013/"/>
+      <meta property="og:site_name" content="daigofujiwara.com"/>
+
+  
+  </head>
+
+  <body id="home">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#home"　class="anchorLink">2013 Baseball Hack Day</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <!-- <li class="active"><a href="#">Home</a></li> -->
+              <li><a href="#obp" class="anchorLink">OBP</a></li>
+              <!--<li><a href="#defense" class="anchorLink">Defense stats</a></li>
+              <li><a href="#sbwinners" class="anchorLink">Super Bowl winners</a></li> -->
+              <li> <a href="https://github.com/daigofuji/">GitHub</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>History of On Base Percentage since 1960</h1>
+        <p>Discripton goes here</p>
+        <p>A project for <a href="http://baseballhackday.com/">2013 Baseball Hack Day</a> on Saturday, March 30, 2013 at thoughtbot by Daigo Fujiwara. Data is from <a href="http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Team+hitting&game_type='R'&season=2012&season_type=ANY&league_code='MLB'&sectionType=st&statType=hitting&page=1&ts=1364672675033&playerType=QUALIFIER&sportCode='mlb'&split=&team_id=&active_sw=&position=&page_type=SortablePlayer&sortOrder='desc'&sortColumn=obp&results=&perPage=50&timeframe=&last_x_days=&extended=0">MLB.com</a>.</p>
+      
+      </div>
+
+      <hr id="obp">
+      <div id="container" style="min-width: 400px; height: 700px; margin: 0 auto"></div>
+
+
+
+      <p>Notes:</p>
+      <ul class="quiet">
+        <li>Los Angeles Angels was known as California Angels (1965–96), and Anaheim Angels (1997–2004)</li>
+        <li>Houston Astros were known as Colt 45's 1962-64</li>
+        <li>Oakland Athletics were in Kansas City 1955–1967</li>
+        <li>Atlanta Braves were in Milwaukee 1953-65</li>
+        <li>Milwaukee Brewers were Seattle Pilots in 1969</li>
+        <li>Tampa Bay dropped "Devil" from their name in 2008</li>
+        <li>Texas Rangers were known as Washington Senators from 1961-71.</li>
+        <li>Minnesota Twins were know as Washington Senators from 1901-60.</li>
+        <li>Florida Marlins became Miami Marlins in 2012</li>
+        <li>Montreal Expos became Washington Nationals in 2005</li>
+      </ul>
+
+
+      <hr>
+      <footer>
+        <p>By <a href="http://about.me/daigofujiwara">Daigo Fujiwara</a>, 2013. Using <a href="http://www.highcharts.com/">highcharts.js</a>, <a href="http://jquery.com/">jquery</a>, <a href="http://twitter.github.com/bootstrap/">bootstrap</a>, and <a href="http://opensans.com/">Open Sans</a>. Follow me on <a href="https://twitter.com/daigofuji">Twitter @DaigoFuji</a>. Also, check out <a href="http://baseballhackday.com/">Baseball Hack Day</a>, a hack-a-thon that I am organizing every spring (Thanks!).  SOURCE: <a href="http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Team+hitting&game_type='R'&season=2012&season_type=ANY&league_code='MLB'&sectionType=st&statType=hitting&page=1&ts=1364672675033&playerType=QUALIFIER&sportCode='mlb'&split=&team_id=&active_sw=&position=&page_type=SortablePlayer&sortOrder='desc'&sortColumn=obp&results=&perPage=50&timeframe=&last_x_days=&extended=0">MLB.com</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/highcharts.js"></script>
+    <script src="assets/js/exporting.js"></script>
+
+    <script src="assets/obpdata.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'spline'
+            },
+            title: {
+                text: 'On Base Percentage'
+            },
+            subtitle: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+            colors: [
+                '#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888','#999999', '#e0e0e0', '#d7d7d7', '#cfcfcf', '#c6c6c6', '#bdbdbd', '#b4b4b4', '#ababab', '#a2a2a2', '#9a9a9a', '#919191', '#888888'
+            ],
+            xAxis: {
+                categories: ["'60", "'61", "'62", "'63", "'64", "'65", "'66", "'67", "'68", "'69", "'70", "'71", "'72", "'73", "'74", "'75", "'76", "'77", "'78", "'79", "'80", "'81", "'82", "'83", "'84", "'85", "'86", "'87", "'88", "'89", "'90", "'91", "'92", "'93", "'94", "'95", "'96", "'97", "'98", "'99", "'00", "'01", "'02", "'03", "'04", "'05", "'06", "'07", "'08", "'09", "'10", "'11", "'12"]
+            },
+            yAxis: {
+                title: {
+                    text: 'On Base Percentage'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value
+                    }
+                }
+            },
+            tooltip: {
+                crosshairs: false,
+                shared: false,
+                valuePrefix: '',
+                valueSuffix: ''
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                      enabled: false,
+                      states: {
+                        hover: {
+                            enabled: true,
+                            symbol: 'circle'
+                        }
+                      }
+                    }
+                }
+            },
+            series: obpdata
+        });
+    });
+    
+});
+
+
+
+/*******
+
+    *** Anchor Slider by Cedric Dugas   ***
+    *** Http://www.position-absolute.com ***
+    
+    Never have an anchor jumping your content, slide it.
+
+    Don't forget to put an id to your anchor !
+    You can use and modify this script for any project you want, but please leave this comment as credit.
+    
+*****/
+
+$(document).ready(function() {
+    $("a.anchorLink").anchorAnimate()
+});
+
+jQuery.fn.anchorAnimate = function(settings) {
+    settings = jQuery.extend({
+        speed : 1100
+    }, settings);   
+    
+    return this.each(function(){
+        var caller = this
+        $(caller).click(function (event) {  
+            event.preventDefault()
+            var locationHref = window.location.href
+            var elementClick = $(caller).attr("href")
+            
+            var destination = $(elementClick).offset().top;
+            $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
+                window.location.hash = elementClick
+            });
+            return false;
+        })
+    })
+}
+
+
+//]]>
+</script>
+
+<!-- Google analytic mambo jumbo -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8418273-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </body>
+</html>
